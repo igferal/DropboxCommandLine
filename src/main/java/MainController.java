@@ -40,12 +40,15 @@ public class MainController {
     }
 
     public void cdDotDot() {
-        executor.run(new CDDOTDOT(), this
-        );
+        executor.run(new CDDOTDOT(), this);
     }
 
     public void upload(String file) {
         executor.run(new Upload(file), this);
+    }
+
+    public void mkDir(String currentFolder) {
+        executor.run(new MkDir(currentFolder), this);
     }
 
     public void exit() {

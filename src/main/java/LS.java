@@ -16,7 +16,7 @@ public class LS implements Action {
         ListFolderResult result = client.files().listFolder(mainController.getCurrentFolder());
         while (true) {
             for (Metadata metadata : result.getEntries()) {
-                System.out.println(metadata.getPathLower());
+                System.out.println(metadata.getName());
             }
 
             if (!result.getHasMore()) {

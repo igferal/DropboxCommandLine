@@ -36,6 +36,8 @@ public class UI {
                 mainController.cd(fullFolder(line));
             else if ("upload".equals(command))
                 mainController.upload(fullFolder(line));
+            else if ("mkdir".equals(command))
+                mainController.mkDir(fullFolder(line));
             else if ("exit".equals(command))
                 mainController.exit();
 
