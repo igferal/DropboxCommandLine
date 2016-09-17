@@ -44,6 +44,10 @@ public class MainController {
         );
     }
 
+    public void upload(String file) {
+        executor.run(new Upload(file), this);
+    }
+
     public void exit() {
         System.exit(0);
     }

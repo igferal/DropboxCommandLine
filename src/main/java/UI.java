@@ -30,31 +30,30 @@ public class UI {
 
             if ("ls".equals(command))
                 mainController.ls();
-            else if("cd".equals(command) && "..".equals(line[1])){
+            else if ("cd".equals(command) && "..".equals(line[1])) {
                 mainController.cdDotDot();
-            }
-            else if ("cd".equals(command))
+            } else if ("cd".equals(command))
                 mainController.cd(fullFolder(line));
+            else if ("upload".equals(command))
+                mainController.upload(fullFolder(line));
             else if ("exit".equals(command))
                 mainController.exit();
-
 
 
         }
         while (true);
     }
 
-    public String fullFolder(String[] line){
+    public String fullFolder(String[] line) {
 
 
         String folder = "";
 
-        for (int i=1;i<line.length;i++){
-            if(i==1){
-                folder+=line[i];
-            }
-            else{
-            folder= folder +" " +line[i];
+        for (int i = 1; i < line.length; i++) {
+            if (i == 1) {
+                folder += line[i];
+            } else {
+                folder = folder + " " + line[i];
             }
         }
 
