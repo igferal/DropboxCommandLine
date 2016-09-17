@@ -30,6 +30,9 @@ public class UI {
 
             if ("ls".equals(command))
                 mainController.ls();
+            else if("cd".equals(command) && "..".equals(line[1])){
+                mainController.cdDotDot();
+            }
             else if ("cd".equals(command))
                 mainController.cd(fullFolder(line));
             else if ("exit".equals(command))

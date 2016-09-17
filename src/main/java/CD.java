@@ -16,7 +16,7 @@ public class CD implements Action {
     public boolean run(MainController client) throws DbxException {
 
 
-        client.setCurrentFolder("/"+folder);
+        client.setCurrentFolder(client.getCurrentFolder()+"/"+folder);
         return true;
 
     }

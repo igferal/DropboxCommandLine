@@ -39,6 +39,11 @@ public class MainController {
 
     }
 
+    public void cdDotDot() {
+        executor.run(new CDDOTDOT(), this
+        );
+    }
+
     public void exit() {
         System.exit(0);
     }
@@ -70,4 +75,6 @@ public class MainController {
     public void setCurrentFolder(String currentFolder) {
         this.currentFolder = currentFolder;
     }
+
+
 }
