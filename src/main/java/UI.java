@@ -26,12 +26,36 @@ public class UI {
             System.out.print("> ");
 
             String[] line = in.readLine().split(" ");
-            if ("ls".equals(line)) ;
+            String command = line[0];
+
+            if ("ls".equals(command))
                 mainController.ls();
+            else if ("cd".equals(command))
+                mainController.cd(fullFolder(line));
+            else if ("exit".equals(command))
+                mainController.exit();
+
 
 
         }
         while (true);
+    }
+
+    public String fullFolder(String[] line){
+
+
+        String folder = "";
+
+        for (int i=1;i<line.length;i++){
+            if(i==1){
+                folder+=line[i];
+            }
+            else{
+            folder= folder +" " +line[i];
+            }
+        }
+
+        return folder;
     }
 
 }

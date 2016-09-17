@@ -1,5 +1,4 @@
-package Actions;
-
+import com.dropbox.core.DbxException;
 import com.dropbox.core.v2.DbxClientV2;
 
 /**
@@ -7,6 +6,6 @@ import com.dropbox.core.v2.DbxClientV2;
  */
 public interface Action {
 
-    boolean run(DbxClientV2 client);
+    boolean run(MainController client) throws DbxException;
 
 }
